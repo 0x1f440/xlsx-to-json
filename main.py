@@ -12,7 +12,8 @@ for file_name in excel_files:
         keys = sheet.keys()
 
         for lang_code in keys[1:]:
-            folder_name = lang_code
+            folder_name = str(lang_code)
+
             if not os.path.exists(folder_name):
                 os.makedirs(folder_name)
 
